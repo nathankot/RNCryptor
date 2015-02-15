@@ -38,6 +38,10 @@
                          password:(NSString *)password
                           handler:(RNCryptorHandler)handler;
 
+// Custom
+- (RNEncryptor *)initWithAESSettingsAndPassword:(NSString *)password
+                          handler:(RNCryptorHandler)handler;
+
 // This form with manual IV is generally only used for testing
 - (RNEncryptor *)initWithSettings:(RNCryptorSettings)theSettings
                     encryptionKey:(NSData *)anEncryptionKey

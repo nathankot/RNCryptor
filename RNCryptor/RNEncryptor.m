@@ -146,6 +146,13 @@
                  handler:aHandler];
 }
 
+- (RNEncryptor *)initWithAESSettingsAndPassword:(NSString *)password
+                 handler:(RNCryptorHandler)handler; {
+  return [self initWithSettings:kRNCryptorAES256Settings
+               password:password
+               handler:handler];
+}
+
 
 - (RNEncryptor *)initWithSettings:(RNCryptorSettings)theSettings
                          password:(NSString *)aPassword
